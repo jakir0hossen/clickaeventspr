@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:clickaeventsp/deshbord/deshbord.dart';
 import 'package:clickaeventsp/onboarding_screen/welcome_screen.dart';
+import 'package:clickaeventsp/screen/main%20manu/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         if (user == null && mounted) {
           Get.to(() => const WelcomeScreen());
         } else {
-          Get.to(() => const Deshbord());
+          Get.to(() => const Home());
         }
       });
     });

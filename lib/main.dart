@@ -1,5 +1,5 @@
 
-import 'package:clickaeventsp/screen/main%20manu/budget.dart';
+import 'package:clickaeventsp/screen/main%20manu/home.dart';
 import 'package:clickaeventsp/screen/main%20manu/event.dart';
 import 'package:clickaeventsp/screen/main%20manu/guestsPage.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +9,6 @@ import 'package:get/get.dart';
 import 'onboarding_screen/login_screen.dart';
 import 'onboarding_screen/register_screen.dart';
 import 'onboarding_screen/splash_screen.dart';
-import 'screen/main manu/Home.dart';
 
 
 
@@ -32,14 +31,14 @@ class MyApp extends StatelessWidget {
               primary: Colors.black,
             ),
       ),
-      initialRoute: '/home',
+      initialRoute: '/splash',
       routes: {
         '/splash': (context) => const SplashScreen(),
         '/login': (context) => const LoginScreen(),
         '/registerScreen': (context) => const RegisterScreen(),
         '/CompleteProfileScreen': (context) => const CompleteProfileScreen(),
         '/Event': (context) => const Event(),
-        '/home': (context) => const home(),
+        '/home': (context) => const Home(),
         '/Guests': (context) =>  Guests(),
 
 

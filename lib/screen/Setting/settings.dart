@@ -1,5 +1,5 @@
 
-import 'package:clickaeventsp/screen/main%20manu/Home.dart';
+import 'package:clickaeventsp/screen/main%20manu/home.dart';
 import 'package:clickaeventsp/style/style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class _SettingsState extends State<Settings> {
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
-                builder: (BuildContext context) => home()));
+                builder: (BuildContext context) => Home()));
           },
           icon: const Icon(Icons.arrow_back),
         ),
