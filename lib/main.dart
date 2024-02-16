@@ -1,3 +1,7 @@
+
+import 'package:clickaeventsp/screen/main%20manu/budget.dart';
+import 'package:clickaeventsp/screen/main%20manu/event.dart';
+import 'package:clickaeventsp/screen/main%20manu/guestsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:clickaeventsp/onboarding_screen/complete_profile_screen.dart';
@@ -5,6 +9,9 @@ import 'package:get/get.dart';
 import 'onboarding_screen/login_screen.dart';
 import 'onboarding_screen/register_screen.dart';
 import 'onboarding_screen/splash_screen.dart';
+import 'screen/main manu/Home.dart';
+
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,12 +32,18 @@ class MyApp extends StatelessWidget {
               primary: Colors.black,
             ),
       ),
-      initialRoute: '/splash',
+      initialRoute: '/home',
       routes: {
         '/splash': (context) => const SplashScreen(),
         '/login': (context) => const LoginScreen(),
         '/registerScreen': (context) => const RegisterScreen(),
         '/CompleteProfileScreen': (context) => const CompleteProfileScreen(),
+        '/Event': (context) => const Event(),
+        '/home': (context) => const home(),
+        '/Guests': (context) =>  Guests(),
+
+
+
       },
     );
   }

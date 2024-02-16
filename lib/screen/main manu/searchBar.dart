@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-class Search  extends SearchDelegate{
+class Search extends  SearchDelegate{
 
   List<String> allData = [
     'Favorite','Friends','Share','Request'
@@ -22,13 +22,13 @@ class Search  extends SearchDelegate{
   @override
   Widget? buildLeading(BuildContext context) {
 
-    return 
+    return
       IconButton(
-          onPressed: (){ 
+          onPressed: (){
             close(context, null);
           },
           icon: Icon(Icons.arrow_back));
-    
+
   }
 
   @override
@@ -72,5 +72,5 @@ class Search  extends SearchDelegate{
   }
 
 
-  
+
 }

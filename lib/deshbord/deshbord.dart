@@ -1,13 +1,15 @@
-
+import 'package:clickaeventsp/screen/main%20manu/budget.dart';
 import 'package:clickaeventsp/screen/main%20manu/calander.dart';
 import 'package:clickaeventsp/screen/main%20manu/checkList.dart';
 import 'package:clickaeventsp/screen/main%20manu/searchBar.dart';
+import 'package:clickaeventsp/screen/main%20manu/sub%20manu/eventSchedulePage.dart';
 import 'package:clickaeventsp/screen/main%20manu/sub%20manu/navbar.dart';
 import 'package:clickaeventsp/screen/widgets/bodyBackground.dart';
 import 'package:clickaeventsp/style/style.dart';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../screen/main manu/event.dart';
+import '../screen/main manu/guestsPage.dart';
 
 class Deshbord extends StatefulWidget {
   const Deshbord({super.key});
@@ -118,7 +120,11 @@ class _DeshbordState extends State<Deshbord> {
               ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_){
+                  return BudgetPage();
+                }));
+              },
               child: Container(
                 decoration: const BoxDecoration(
                     color: Colors.white,
@@ -148,7 +154,11 @@ class _DeshbordState extends State<Deshbord> {
               ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_){
+                  return const Event();
+                }));
+              },
               child: Container(
                 decoration: const BoxDecoration(
                     color: Colors.white,
@@ -178,7 +188,11 @@ class _DeshbordState extends State<Deshbord> {
               ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_){
+                  return const EventSchedulePage();
+                }));
+              },
               child: Container(
                 decoration: const BoxDecoration(
                     color: Colors.white,
@@ -208,7 +222,11 @@ class _DeshbordState extends State<Deshbord> {
               ),
             ),
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (_){
+                  return const Guests();
+                }));
+              },
               child: Container(
                 decoration: const BoxDecoration(
                     color: Colors.white,
@@ -237,71 +255,10 @@ class _DeshbordState extends State<Deshbord> {
                 ),
               ),
             ),
-            InkWell(
-              onTap: (){},
-              child: Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 5
-                      )
-                    ]
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Image.asset("assets/images/help.png",
-                        width: 50,
-                        height: 50,
-                      ),
-                      const Text("Help",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),)
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            InkWell(
-              onTap: (){},
-              child: Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey,
-                          blurRadius: 5
-                      )
-                    ]
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Image.asset("assets/images/ticket.png",
-                        width: 50,
-                        height: 50,
-                      ),
-                      const Text("Ticket",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),)
-                    ],
-                  ),
-                ),
-              ),
-            ),
+
           ],
         ),
-
       ),
-
     );
   }
 }

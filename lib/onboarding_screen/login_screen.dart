@@ -1,8 +1,8 @@
+
 import 'package:clickaeventsp/deshbord/deshbord.dart';
 import 'package:clickaeventsp/onboarding_screen/auth_service.dart';
 import 'package:clickaeventsp/onboarding_screen/register_screen.dart';
-import 'package:clickaeventsp/screen/main%20manu/HomePage.dart';
-import 'package:clickaeventsp/screen/main%20manu/mainScreen.dart';
+import 'package:clickaeventsp/screen/main%20manu/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -125,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       String flag = await auth.loginUser(
                           email.text.trim(), password.text.trim());
                       if (flag == "true") {
-                        Get.offAll(const Deshbord());
+                        Get.offAll(const home());
                       } else {
                         Get.snackbar("Something went wrong", flag,
                             duration: const Duration(seconds: 3));
